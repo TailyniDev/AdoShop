@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/responsivo.css">
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+    <main>
+        <div class="login-left">
+            <img src="assets/imgs/AdoBest_Cover_StandardEdition.jpg" alt="Capa do Álbum">
+        </div>
+
+        <div class="login-right">
+            <div class="login-container">
+                <form id="form-registro">
+                    <input type="text" id="registro-user" placeholder="Username" required>
+                    <input type="password" id="registro-senha" placeholder="Password" required>
+                    <input type="email" id="registro-email" placeholder="Email" required>
+                    
+                    <div class="button-group">
+                        <button type="submit">Cadastro</button>
+                        <button type="button" onclick="window.location.href='login.html'">Login</button>
+                    </div>
+                    <div class="forgot-password">Esqueceu a senha?</div>
+                    <div class="forgot-password"><a href="login.html">Já tem uma conta? Faça o Login</a></div>
+                </form>
+            </div>
+        </div>
+
+        <script src="scripts/app.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const formRegistro = document.getElementById('form-registro');
+                if (formRegistro) {
+                    formRegistro.onsubmit = function(event) {
+                        event.preventDefault();
+                        const user = document.getElementById('registro-user').value.trim();
+                        const senha = document.getElementById('registro-senha').value;
+                        const email = document.getElementById('registro-email').value.trim();
+                        registrar(user, senha, email);
+                    };
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>

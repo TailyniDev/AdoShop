@@ -1,0 +1,167 @@
+{
+  "produtos": [
+    {
+      "id": "b6ca",
+      "nome": "Blue Rose T-shirt [GOODS]",
+      "preco": 147.46,
+      "imagem": "assets/imgs/produtos/camisa.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    },
+    {
+      "id": "b3fe",
+      "nome": "Cap [GOODS]",
+      "preco": 158.52,
+      "imagem": "assets/imgs/produtos/bone.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    },
+    {
+      "id": "e278",
+      "nome": "Ear Cuff [GOODS]",
+      "preco": 117.97,
+      "imagem": "assets/imgs/produtos/orelha.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": true
+    },
+    {
+      "id": "9ff3",
+      "nome": "Penlight Stand [GOODS]",
+      "preco": 125.34,
+      "imagem": "assets/imgs/produtos/stand.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    },
+    {
+      "id": "642d",
+      "nome": "Tapestry [GOODS]",
+      "preco": 99.54,
+      "imagem": "assets/imgs/produtos/poster.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": true
+    },
+    {
+      "id": "3719",
+      "nome": "Mini Character Keychain -Available at all stores [GOODS]",
+      "preco": 44.24,
+      "imagem": "assets/imgs/produtos/chaveiro.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": true
+    },
+    {
+      "id": "699c",
+      "nome": "Acrylic Badge Case -Available at all stores [GOODS]",
+      "preco": 58.98,
+      "imagem": "assets/imgs/produtos/chaveiro2.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    },
+    {
+      "id": "7b10",
+      "nome": "Acrylic Trading Card Case -Available at all stores [GOODS]",
+      "preco": 61.2,
+      "imagem": "assets/imgs/produtos/acrilico.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    },
+    {
+      "id": "f605",
+      "nome": "Ado's Best Adobum Vol.2 [Vinyl Record]",
+      "preco": 206.45,
+      "imagem": "assets/imgs/produtos/vinil.png",
+      "descrição": "a",
+      "quantidade": 100,
+      "categoria": "roupas",
+      "peso": 0.5,
+      "limited": false
+    }
+  ],
+  "logins": [
+    {
+      "id": "1",
+      "user": "teste",
+      "senha": "1",
+      "email": "teste@gmail.com"
+    },
+    {
+      "id": "2",
+      "user": "teste2",
+      "senha": "1",
+      "email": "teste2@gmail.com"
+    },
+    {
+      "id": "6291",
+      "user": "testes3",
+      "senha": "teste",
+      "email": "teste@gmail.com"
+    },
+    {
+      "id": "5747",
+      "user": "Schneider",
+      "senha": "a",
+      "email": "guilhermeschneider077@gmail.com"
+    },
+    {
+      "id": "b239",
+      "user": "JP",
+      "senha": "123",
+      "email": "JPlindoSegundoOutros@gmail.com"
+    },
+    {
+      "id": "ff39",
+      "user": "renatoff",
+      "senha": "123123123",
+      "email": "emailteste@gmailrrsrs"
+    },
+    {
+      "id": "2912",
+      "user": "JP",
+      "senha": "Jppilantrinha",
+      "email": "Jppilantrinha@gmail.com"
+    },
+    {
+      "id": "e393",
+      "user": "JP_Pilantra",
+      "senha": "JPPilantrinha",
+      "email": "JPpilantrinha@gmail.com"
+    },
+    {
+      "id": "bf9e",
+      "user": "JP_Pilantra1",
+      "senha": "JPPilantrinha1",
+      "email": "JPpilantrinha@gmail.com1"
+    }
+  ],
+  "adms": [
+    {
+      "id": "1",
+      "user": "Tailyni",
+      "senha": "senha@",
+      "email": "tailyni@gmail.com"
+    }
+  ]
+}

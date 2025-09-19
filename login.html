@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+    <main>
+        <div class="login-left">
+            <img src="assets/imgs/AdoBest_Cover_StandardEdition.jpg" alt="Capa do Álbum">
+        </div>
+
+        <div class="login-right">
+            <div class="login-container">
+                <form id="form-login">
+                    <input type="text" id="login-user" placeholder="Username" required>
+                    <input type="password" id="login-senha" placeholder="Password" required>
+                    <div class="button-group">
+                        <button type="submit">Login</button>
+                        <button type="button" onclick="window.location.href='registro.html'">Cadastro</button>
+                    </div>
+                    <div class="forgot-password">Esqueceu a senha?</div>
+                    <div class="forgot-password"><a href="registro.html">Não tem uma conta? Faça o Cadastro</a></div>
+                </form>
+            </div>
+        </div>
+
+        <script src="scripts/app.js"></script>
+        <script>
+            // Aguarda o DOM carregar completamente
+            document.addEventListener('DOMContentLoaded', function() {
+                const formLogin = document.getElementById('form-login');
+                if (formLogin) {
+                    formLogin.onsubmit = function(event) {
+                        event.preventDefault();
+                        const user = document.getElementById('login-user').value.trim();
+                        const senha = document.getElementById('login-senha').value;
+                        login(user, senha);
+                    };
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>

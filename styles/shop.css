@@ -1,0 +1,312 @@
+/* shop.css - Estilo moderno para a loja */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto 60px auto;
+    padding: 30px;
+}
+
+.produto-card {
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 20, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.produto-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #00688F;
+    background: linear-gradient(90deg, rgba(0, 104, 143, 1) 0%, rgba(60, 63, 86, 1) 50%, rgba(189, 190, 211, 1) 100%);
+    background-size: 400% 400%;
+    z-index: -1;
+    border-radius: 18px;
+    animation: gradientBorder 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.produto-card:hover::before {
+    opacity: 1;
+}
+
+.produto-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover img {
+    transform: scale(1.05);
+}
+
+.produto-card h3 {
+    margin: 15px 0;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    min-height: 3.2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.produto-card .preco {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #91c1e7;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.badge-limited {
+    background: #91C1E7;
+    background: linear-gradient(90deg, rgba(145, 193, 231, 1) 0%, rgba(86, 90, 116, 1) 50%);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(107, 184, 255, 0.3);
+}
+
+.btn-comprar {
+    background: #91C1E7;
+    background: linear-gradient(90deg, rgba(145, 193, 231, 1) 0%, rgba(86, 90, 116, 1) 50%);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 18px rgba(107, 184, 255, 0.3);
+    width: 100%;
+}
+
+.btn-comprar:hover {
+    background: #91C1E7;
+background: linear-gradient(90deg, rgba(145, 193, 231, 1) 0%, rgba(86, 90, 116, 1) 50%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(107, 184, 255, 0.3);
+}
+
+.btn-comprar:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Filtros modernizados */
+.filtros-container {
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(30, 30, 30, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filtros-container select, 
+.filtros-container input {
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.filtros-container select:focus, 
+.filtros-container input:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(107, 184, 255, 0.3);
+}
+
+.categoria-filtro {
+    min-width: 200px;
+}
+
+.pesquisa-filtro {
+    flex-grow: 1;
+    max-width: 350px;
+}
+
+.ordenacao-filtro {
+    min-width: 180px;
+}
+
+/* Título modernizado */
+.titulo-pagina {
+    text-align: center;
+    font-size: 3rem;
+    margin: 40px 0;
+    color: #91C1E7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.titulo-pagina::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: #00688F;
+    background: linear-gradient(90deg, rgba(0, 104, 143, 1) 0%, rgba(60, 63, 86, 1) 50%, rgba(189, 190, 211, 1) 100%);
+    border-radius: 2px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.produto-card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.produto-card:nth-child(2) { animation-delay: 0.1s; }
+.produto-card:nth-child(3) { animation-delay: 0.2s; }
+.produto-card:nth-child(4) { animation-delay: 0.3s; }
+.produto-card:nth-child(5) { animation-delay: 0.4s; }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    .titulo-pagina {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .filtros-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .filtros-container select, 
+    .filtros-container input {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .titulo-pagina {
+        font-size: 2.2rem;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .produto-card {
+        padding: 15px;
+    }
+    
+    .produto-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .produto-card .preco {
+        font-size: 1.3rem;
+    }
+    
+    .titulo-pagina {
+        font-size: 1.8rem;
+    }
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Efeito de brilho nos cards */
+.produto-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.produto-card:hover::after {
+    left: 100%;
+}

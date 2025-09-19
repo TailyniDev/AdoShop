@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - AdoShop</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/produto.css">
+    <link rel="stylesheet" href="styles/responsivo.css">
+    <script src="scripts/app.js"></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="assets/logo.avif" alt="Logo" width="20%">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button>🔍</button>
+    </div>
+
+    <div class="icons">
+        <!-- Área do usuário -->
+        <div class="user-area" style="display: flex; align-items: center; gap: 10px;">
+            <span id="user-display" style="color: white; font-size: 14px;">Visitante</span>
+            
+            <!-- Menu quando não logado -->
+            <div id="auth-buttons" style="display: flex; gap: 5px;">
+                <a href="login.html" style="text-decoration: none;">
+                    <img src="assets/svg/profile-1341-svgrepo-com (1).svg" alt="Login" width="30px">
+                </a>
+            </div>
+            
+            <!-- Menu quando logado -->
+            <div id="user-menu" style="display: none; gap: 10px; align-items: center;">
+                <a href="profile.html" style="text-decoration: none;">
+                    <img src="assets/svg/profile-1341-svgrepo-com (1).svg" alt="Perfil" width="30px">
+                </a>
+                <button onclick="logout()" style="background: none; border: none; cursor: pointer; padding: 5px;">
+                    <img src="assets/svg/logout-svgrepo-com.svg" alt="Sair" width="25px">
+                </button>
+            </div>
+        </div>
+
+        <div class="carrinho" onclick="abrirCarrinho()">
+            <img src="assets/svg/cart-shopping-svgrepo-com (1).svg" alt="Carrinho" width="30px"> 
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="produto-detalhes" class="produto-detalhes-container"></div>
+    
+    <script src="scripts/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            carregarProdutoDetalhe();
+            atualizarUIUsuario();
+        });
+    </script>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-sobre">
+            <h2>Sobre nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, id a fugit itaque delectus omnis unde.</p>
+        </div>
+        <div class="footer-contato">
+            <h2>Contato</h2>
+            <ul>
+                <li><a href="tel:+55119200202002">📞 +11 92002-02002</a></li>
+                <li><a href="mailto:info@gmail.com">✉ info@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h2>Links rápidos</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 AdoShop. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

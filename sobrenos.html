@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - AdoShop</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/sobre.css">
+    <link rel="stylesheet" href="styles/responsivo.css">
+    <script src="scripts/app.js"></script>
+    <style>
+        /* Estilos adicionais específicos para a página Sobre Nós */
+        .hero-sobre {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/imgs/rose.png') center/cover;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .hero-sobre h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #91c1e7;
+        }
+        
+        .hero-sobre p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .sobre-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .sobre-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .sobre-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sobre-card h2 {
+            color: #91c1e7;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #91c1e7;
+            padding-bottom: 10px;
+        }
+        
+        .sobre-card h3 {
+            color: #91c1e7;
+            margin: 20px 0 10px;
+        }
+        
+        .valores-lista {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .valores-lista li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .valores-lista li:before {
+            content: "★";
+            color: #91c1e7;
+            margin-right: 10px;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #91c1e7;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            width: 50%;
+            padding: 20px 40px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #91c1e7;
+            border-radius: 50%;
+            top: 30px;
+        }
+        
+        .timeline-item:nth-child(odd):before {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even):before {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .timeline-year {
+            font-weight: bold;
+            color: #91c1e7;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #91c1e7;
+            margin-bottom: 10px;
+        }
+        
+        .video-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 20px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+                text-align: left;
+            }
+            
+            .timeline-item:nth-child(odd):before,
+            .timeline-item:nth-child(even):before {
+                left: 10px;
+            }
+            
+            .hero-sobre h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="assets/logo.avif" alt="Logo" width="20%">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+        <button>🔍</button>
+    </div>
+
+    <div class="icons">
+        <!-- Área do usuário -->
+        <div class="user-area" style="display: flex; align-items: center; gap: 10px;">
+            <span id="user-display" style="color: white; font-size: 14px;">Visitante</span>
+            
+            <!-- Menu quando não logado -->
+            <div id="auth-buttons" style="display: flex; gap: 5px;">
+                <a href="login.html" style="text-decoration: none;">
+                    <img src="assets/svg/profile-1341-svgrepo-com (1).svg" alt="Login" width="30px">
+                </a>
+            </div>
+            
+            <!-- Menu quando logado -->
+            <div id="user-menu" style="display: none; gap: 10px; align-items: center;">
+                <a href="profile.html" style="text-decoration: none;">
+                    <img src="assets/svg/profile-1341-svgrepo-com (1).svg" alt="Perfil" width="30px">
+                </a>
+                <button onclick="logout()" style="background: none; border: none; cursor: pointer; padding: 5px;">
+                    <img src="assets/svg/logout-svgrepo-com.svg" alt="Sair" width="25px">
+                </button>
+            </div>
+        </div>
+
+        <div class="carrinho" onclick="abrirCarrinho()">
+            <img src="assets/svg/cart-shopping-svgrepo-com (1).svg" alt="Carrinho" width="30px"> 
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero-sobre">
+        <h1>Sobre a AdoShop</h1>
+        <p>Conectando fãs da cultura japonesa com produtos exclusivos e de alta qualidade desde 2020</p>
+    </section>
+
+    <div class="sobre-content">
+        <div class="sobre-grid">
+            <div class="sobre-card">
+                <h2>Nossa História</h2>
+                <p>A AdoShop nasceu da paixão por música japonesa e cultura pop oriental. Tudo começou em 2020 quando nossos fundadores, grandes fãs da cantora Ado, perceberam a dificuldade que os fãs brasileiros tinham em adquirir produtos oficiais e de qualidade.</p>
+                <p>O que começou como um pequeno projeto entre amigos rapidamente se transformou em uma das principais lojas especializadas em produtos de cultura pop asiática no Brasil, sempre mantendo nosso compromisso com a autenticidade e qualidade.</p>
+            </div>
+            
+            <div class="sobre-card">
+                <h2>Missão & Visão</h2>
+                <h3>Missão</h3>
+                <p>Proporcionar aos fãs brasileiros acesso a produtos oficiais e exclusivos da cultura pop japonesa, com excelência no atendimento e garantia de autenticidade.</p>
+                
+                <h3>Visão</h3>
+                <p>Ser a plataforma líder em experiência de compra para entusiastas da cultura pop oriental na América Latina, expandindo nosso catálogo e serviços continuamente.</p>
+            </div>
+            
+            <div class="sobre-card">
+                <h2>Nossos Valores</h2>
+                <ul class="valores-lista">
+                    <li><strong>Autenticidade:</strong> Todos os produtos são originais e licenciados</li>
+                    <li><strong>Paixão pela cultura:</strong> Somos fãs assim como você</li>
+                    <li><strong>Inovação constante:</strong> Sempre buscamos novidades para nossos clientes</li>
+                    <li><strong>Compromisso com qualidade:</strong> Rigoroso controle em cada etapa</li>
+                    <li><strong>Comunidade:</strong> Acreditamos no poder de unir pessoas através de interesses comuns</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sobre-card">
+            <h2>Nossa Jornada</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <p>Fundada por três amigos apaixonados por cultura japonesa. Primeiro lote de produtos esgotou em 48 horas.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <p>Lançamento do e-commerce próprio. Parceria estabelecida com fornecedores diretos no Japão.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <p>Expansão do catálogo para incluir k-pop e outros produtos asiáticos. Atendimento para toda América Latina.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <p>Primeiro evento físico realizado em São Paulo com mais de 5.000 participantes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <p>Lançamento da linha exclusiva de produtos AdoShop em parceria com artistas japoneses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">15.000+</div>
+                <div class="stat-label">Clientes satisfeitos</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">2.500+</div>
+                <div class="stat-label">Produtos diferentes</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">98,7%</div>
+                <div class="stat-label">Avaliações positivas</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Países atendidos</div>
+            </div>
+        </div>
+        
+        <div class="sobre-card">
+            <h2>Curiosidades</h2>
+            <p>• Nosso produto mais vendido de todos os tempos é o Blue Rose T-shirt, com mais de 3.000 unidades vendidas</p>
+            <p>• Já enviamos encomendas para lugares remotos como Fernando de Noronha e até para a Antártida!</p>
+            <p>• Temos uma equipe de "caçadores de tendências" que viaja para o Japão twice por ano para descobrir novidades</p>
+            <p>• Desenvolvemos embalagens especiais que viram itens de colecionador, muitos clientes nos pedem caixas extras</p>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>Conheça mais sobre o mundo Ado</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eZuDklxsaRg?si=XX9CGmGFemgdaDPW&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-sobre">
+            <h2>Sobre nós</h2>
+            <p>A AdoShop é especializada em produtos oficiais da cultura pop japonesa, trazendo autenticidade e qualidade para os fãs brasileiros.</p>
+        </div>
+        <div class="footer-contato">
+            <h2>Contato</h2>
+            <ul>
+                <li><a href="tel:+55119200202002">📞 +11 92002-02002</a></li>
+                <li><a href="mailto:info@adishop.com">✉ info@adishop.com</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h2>Links rápidos</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 AdoShop. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

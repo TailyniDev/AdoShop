@@ -1,0 +1,118 @@
+/* MAIN LAYOUT */
+main {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* LEFT IMAGE */
+.login-left {
+    flex: 1;
+    display: none; /* escondemos no mobile */
+}
+
+.login-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RIGHT FORM */
+.login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* FORM CONTAINER */
+.login-container {
+    width: 100%;
+    max-width: 450px; /* maior para dar espaço aos botões lado a lado */
+    padding: 50px;
+    border-radius: 12px;
+}
+
+/* INPUTS */
+.login-container input {
+    width: 100%;
+    padding: 18px 20px; /* maior altura */
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 18px; /* fonte maior */
+    transition: border 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.login-container input:focus {
+    border-color: #034862;
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* BUTTONS CONTAINER */
+.login-container .button-group {
+    display: flex;
+    gap: 20px; /* espaço entre os botões */
+    margin-top: 15px;
+}
+
+/* BUTTONS */
+.login-container button {
+    flex: 1; /* cada botão ocupa metade do container */
+    padding: 18px 0; /* altura igual ao input */
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.login-container button:first-child {
+    background-color: #034862;
+    color: white;
+}
+
+.login-container button:first-child:hover {
+    background-color: #02648a;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.login-container button:last-child {
+    background-color: #021236;
+    color: white;
+}
+
+.login-container button:last-child:hover {
+    background-color: #030e3a;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.forgot-password:hover {
+    color: #034862;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    .login-left {
+        display: block;
+    }
+}
+

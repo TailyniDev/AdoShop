@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(240, 3%, 11%);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 10px 30px;
+    gap: 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s;
+}
+
+nav li a{
+    text-decoration: none;
+    color: inherit;
+}
+nav li:hover {
+    color: #034862;
+}
+
+.search-bar {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 6px 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 6px 12px;
+    border: none;
+    background: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons a, 
+.icons .carrinho {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icons img {
+    width: 20px;
+}
+
+.icons a:hover,
+.icons .carrinho:hover {
+    color: #034862;
+}
+
+
+.banner img{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/*footer*/
+footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 40px 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* quebra em telas pequenas */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container div {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer h2 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #034862;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0 0;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #777;
+}
